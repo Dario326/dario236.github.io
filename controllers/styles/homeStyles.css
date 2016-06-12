@@ -1,0 +1,31 @@
+
+@font-face {font-family: "URWAnnualW01-Normal";
+    src: url("http://db.onlinewebfonts.com/t/4bb398516faff99df485317abc69bb8b.eot");
+    src: url("http://db.onlinewebfonts.com/t/4bb398516faff99df485317abc69bb8b.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/4bb398516faff99df485317abc69bb8b.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/4bb398516faff99df485317abc69bb8b.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/4bb398516faff99df485317abc69bb8b.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/4bb398516faff99df485317abc69bb8b.svg#URWAnnualW01-Normal") format("svg");
+}
+
+@import url(http://db.onlinewebfonts.com/c/4bb398516faff99df485317abc69bb8b?family=URWAnnualW01-Normal);
+
+body {
+    font-family: URWAnnualW01-Normal;
+    
+}
+.carousel-caption {
+    
+    font-family: sans-serif;
+    color: gold;
+    
+}
+.featurette-heading{
+    color: blue;
+}
+.text-muted{
+    color: gold;
+}
+.featurette-image {
+    margin-top: 1%;
+}
