@@ -1,34 +1,916 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="devJeopardy">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dev Jeopardy</title>
-   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="controllers/styles/homeStyles.css">
-    <link rel="stylesheet" href="controllers/styles/howToPlayStyles.css">
-    <link rel="stylesheet" href="controllers/styles/questionStyles.css">
-    
-     <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Page Title -->
+    <title>Mental Minded</title>
+    <!-- Favicon -->
+    <link rel="icon" href="#">
+    <!-- Animate -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Cube Portfolio -->
+    <link rel="stylesheet" href="css/cubeportfolio.min.css">
+    <!-- Fancy Box -->
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="rs-plugin/css/navigation.css">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/red-gradient.css">
+
+
+
+
 </head>
-<body>
-<navbar></navbar>
-<ui-view></ui-view>
+<body data-spy="scroll" data-target=".navbar" data-offset="90">
 
-<!--functionnality scripts-->
+<!--Loader Start-->
+<div class="loader">
+    <div class="loader-inner">
+        <div class="loader-blocks">
+            <span class="block-1"></span>
+            <span class="block-2"></span>
+            <span class="block-3"></span>
+            <span class="block-4"></span>
+            <span class="block-5"></span>
+            <span class="block-6"></span>
+            <span class="block-7"></span>
+            <span class="block-8"></span>
+            <span class="block-9"></span>
+            <span class="block-10"></span>
+            <span class="block-11"></span>
+            <span class="block-12"></span>
+            <span class="block-13"></span>
+            <span class="block-14"></span>
+            <span class="block-15"></span>
+            <span class="block-16"></span>
+        </div>
+    </div>
+</div>
+<!--Loader End-->
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.0.1/angularfire.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
-    <script   src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
-        
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-   
-<!--    app Scripts  -->
-<script src="app.js"></script>
-<script src="controllers/homeCtrl.js"></script>
-<script src="controllers/questionsCtrl.js"></script>
-<script src="controllers/DevJeopardySrv.js"></script>
+<!--Header Start-->
+<header>
+
+    <!--Navigation-->
+    <nav class="navbar navbar-top-default center-logo navbar-expand-lg navbar-simple navbar-dark bottom-nav bg-white nav-box-round">
+        <div class="container">
+            <a href="javascript:void(0)" title="Logo" class="logo scroll">
+                <!--Logo Dark-->
+                <!--<img src="images/logo-bold-black.png" alt="logo" class="logo-dark default">-->
+                <h4>Mental Mind</h4>
+            </a>
+
+            <!--Nav Links-->
+            <div class="collapse navbar-collapse" id="wexim">
+                <div class="navbar-nav w-100 ">
+                        <a class="nav-link scroll active" href="#home">Home</a>
+                        <a class="nav-link scroll" href="#about">About</a>
+                        <a class="nav-link scroll" href="#team">Meet the Staff</a>
+                        <a class="nav-link scroll" href="#portfolio">Training</a>
+                        <a class="nav-link scroll" href="#price">Stats</a>
+                        <a class="nav-link scroll" href="#app">Schedule</a>
+                        <a class="nav-link scroll" href="#contact">Contact</a>
+                    <span class="menu-line"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </div>
+            </div>
+
+            <!--Side Menu Button-->
+            <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+        </div>
+    </nav>
+
+    <!--Side Nav-->
+    <div class="side-menu">
+        <div class="inner-wrapper">
+            <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
+            <nav class="side-nav w-100">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link scroll " href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll" href="#team">Meet the Staf</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll" href="#portfolio">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll" href="#price">Stats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="side-footer text-white w-100">
+                <ul class="social-icons-simple">
+                    <li><a class="facebook-text-hvr" href="javascript:void(0)"><i class="fa fa-facebook"></i> </a> </li>
+                    <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="fa fa-instagram"></i> </a> </li>
+                    <li><a class="twitter-text-hvr" href="javascript:void(0)"><i class="fa fa-twitter"></i> </a> </li>
+                </ul>
+                <p class="text-white">&copy; 2019 Code Splash. Made With Love by Themesindustry</p>
+            </div>
+        </div>
+    </div>
+    <a id="close_side_menu" href="javascript:void(0);"></a>
+    <!-- End side menu -->
+
+</header>
+<!--Header end-->
+
+<!--slider-->
+<section id="home" class="p-0 dark-slider no-transition single-slide">
+    <h2 class="d-none">hidden</h2>
+    <div id="rev_slider_19_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="wexim_slider_01" data-source="gallery" style="background:transparent;padding:0px;">
+        <!-- START REVOLUTION SLIDER 5.4.8.1 fullscreen mode -->
+        <div id="rev_slider_19_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.8.1">
+            <ul>
+                <!-- SLIDE 1 -->
+                <li data-index="rs-01" data-transition="fade" data-slotamount="default" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="2000" data-fsmasterspeed="1500" class="rev_gradient">
+
+                    <!-- MAIN IMAGE -->
+                    <img src="images/FullSizeRender.jpeg" alt="" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="8"  data-no-retina>
+
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption tp-resizeme"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['-160','-160','-170','-130']"
+                         data-whitespace="nowrap" data-responsive_offset="on"
+                         data-width="['none','none','none','none']" data-type="text"
+                         data-textalign="['center','center','center','center']"
+                         data-transform_idle="o:1;"
+                         data-transform_in="x:-50px;opacity:0;s:2000;e:Power3.easeOut;"
+                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                         data-start="1000" data-splitin="none" data-splitout="none">
+                        <!--<h2 class="font-weight-100">Mental Mind</h2>-->
+                    </div>
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption tp-resizeme"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['-80','-80','-85','-60']"
+                         data-whitespace="nowrap" data-responsive_offset="on"
+                         data-width="['none','none','none','none']" data-type="text"
+                         data-textalign="['center','center','center','center']"
+                         data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                         data-start="500" data-splitin="none" data-splitout="none">
+                        <!--<h2 class="font-weight-600">Basketball Training</h2>-->
+                        <img src="images/IMG_1562.PNG" style="width: 500px; height: 500px" alt="">
+                    </div>
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption tp-resizeme"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                         data-whitespace="nowrap" data-responsive_offset="on"
+                         data-width="['none','none','none','none']" data-type="text"
+                         data-textalign="['center','center','center','center']"
+                         data-transform_idle="o:1;"
+                         data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                         data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                         data-start="1000" data-splitin="none" data-splitout="none">
+                        <!--<h2 class="font-weight-100">Template</h2>-->
+                    </div>
+                    <!-- LAYER NR. 4 -->
+                    <div class="tp-caption tp-resizeme"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['70','70','70','50']"
+                         data-whitespace="nowrap" data-responsive_offset="on"
+                         data-width="['none','none','none','none']" data-type="text"
+                         data-textalign="['center','center','center','center']" data-fontsize="['24','24','20','20']"
+                         data-transform_idle="o:1;"
+                         data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"
+                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                         data-start="1500" data-splitin="none" data-splitout="none">
+                        <!--<p class="text-dark">The Best Food/Restaurant Template in Market</p>-->
+                    </div>
+                    <!-- LAYER NR. 5 -->
+                    <div class="tp-caption tp-resizeme"
+                         data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                         data-y="['middle','middle','middle','middle']" data-voffset="['160','160','160','130']"
+                         data-width="200" data-height="none"
+                         data-whitespace="normal" data-type="button"
+                         data-actions='' data-responsive_offset="on"
+                         data-textAlign="['center','center','center','center']"
+                         data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]"
+                         data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]"
+                         data-frames='[{"delay":700,"speed":2000,"frame":"0","from":"sX:1;sY:1;opacity:0;fb:40px;","to":"o:1;fb:0;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;"}]'
+                         style=" box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                        <!--<a href="#about" class="scroll btn btn-gradient btn-rounded btn-large">Learn More</a>-->
+                    </div>
+                </li>
+
+
+
+            </ul>
+        </div>
+        <!-- END REVOLUTION SLIDER -->
+    </div>
+
+    <!--slider social-->
+    <div class="slider-social">
+        <ul class="list-unstyled">
+            <li><a class="facebook-text-hvr" href="javascript:void(0);"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a class="twitter-text-hvr" href="javascript:void(0);"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a class="linkedin-text-hvr" href="javascript:void(0);"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a class="instagram-text-hvr" href="javascript:void(0);"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+</section>
+<!--slider end-->
+
+<!--About Start-->
+<section id="about">
+    <div class="container">
+        <!--About-->
+        <div class="row align-items-center wow fadeIn">
+            <div class="col-md-6">
+                <div class="title">
+                        <h6 class="third-color mb-3">Basic info about Basketball</h6>
+                        <h2>Mental Minded Basketball in Atlanta, GA</h2>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                    <p>The mission for Mental Minded Academy is to develop mental skill to the young athletes as well as their physical and fundamental skill.   Teaching kids basic mental skill before any other skill is what the organization want to focus on to create intelligent in their minds. In doing that, the training will focus on Knowledge, Fundamentals, Strength, and Agility. The brand will further be great in the future with the help from the community if we can keep the kids active. Furthermore, it will open up opportunities for other kids in the community who wants to improve their skill ability. The brand will be more than just a training in the future. It will become a life style in  citities in the state for  kids starting  in elementary-school, to middle school, to high school or college. Basketball is similar to our daily life when it comes to communication, time management, overcoming obstacles, making sacrifices, dealing with success and failure, and taking charge. Let’s work and most importantly, let’s learn</p>
+                </div>
+        </div>
+
+        <!--Features-->
+        <div class="row mt-lg-5">
+            <div class="col-md-4 wow fadeInLeft">
+                <div class="feature-box">
+                    <span class="item-number gradient-text1">
+                        01.
+                    </span>
+                    <h6 class="mb-4">Dribbling & Passing</h6>
+                    <p>Lorem ipsum dolor  amet, consectetur adipiscing elit augue diam, accumsan  ipsum dolor sit amet, consectetur adipiscing.</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInUp">
+                <div class="feature-box">
+                    <span class="item-number gradient-text1">
+                        02.
+                    </span>
+                    <h6 class="mb-4">Shooting</h6>
+                    <p>Lorem ipsum dolor  amet, consectetur adipiscing elit augue diam, accumsan  ipsum dolor sit amet, consectetur adipiscing.</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInRight">
+                <div class="feature-box">
+                    <span class="item-number gradient-text1">
+                        03.
+                    </span>
+                    <h6 class="mb-4">Defense and Rebounding</h6>
+                    <p>Lorem ipsum dolor  amet, consectetur adipiscing elit augue diam, accumsan  ipsum dolor sit amet, consectetur adipiscing.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Slider Image-->
+        <div class="row laptop text-center">
+            <div class="col-md-12">
+                <div class="laptop-img wow fadeInUp">
+                    <img src="images/IMG_0336.jpeg" alt="laptop">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--About End-->
+
+<!--Team Start-->
+<section id="team" class="bg-light">
+    <div class="container">
+        <!--Heading-->
+        <div class="row wow fadeIn">
+            <div class="col-md-12 text-center">
+                <div class="title d-inline-block">
+                    <h6 class="mb-3">Basic info about Mental Minded</h6>
+                    <h2 class="gradient-text1 mb-3">Expert Staff</h2>
+                    <p>We take pride in showing you the fundamentals of basketball!</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Team-->
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="team-slider" class="owl-carousel owl-theme wow fadeInUp">
+                    <!--Team Item-->
+                    <div class="team-box item">
+                        <!--Team Image-->
+                        <div class="team-image">
+                            <img src="images/IMG_0178.JPG" alt="image">
+                            <!--Team Overlay-->
+                            <div class="overlay center-block">
+                                <!--Team Social-->
+                                <ul class="team-social">
+                                    <li><a class="facebook-bg-hvr" href="javascript:void(0);"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a class="twitter-bg-hvr" href="javascript:void(0);"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a class="instagram-bg-hvr" href="javascript:void(0);"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a class="pinterest-bg-hvr" href="javascript:void(0);"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--Team Text-->
+                        <div class="team-text">
+                            <h5>Coach DeAngelo</h5>
+                            <span class="alt-font">Trainer</span>
+                        </div>
+                        <!--Team Progress-->
+                        <ul class="team-progress text-left">
+                            <!--Progress Item-->
+                            <li class="progress-item">
+                                <h6>Dunking<span class="float-right"><b class="count">90</b>%</span></h6>
+                                <div class="progress">
+                                <span class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></span>
+                                </div>
+                            </li>
+                            <!--Progress Item-->
+                            <li class="progress-item">
+                                <h6>Rebounds<span class="float-right"><b class="count">75</b>%</span></h6>
+                                <div class="progress">
+                                    <span class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Team Item-->
+                    <div class="team-box item">
+                        <!--Team Image-->
+                        <div class="team-image">
+                            <img src="images/RenderedImage.jpeg" height="310px" alt="image">
+                            <!--Team Overlay-->
+                            <div class="overlay center-block">
+                                <!--Team Social-->
+                                <ul class="team-social">
+                                    <li><a class="facebook-bg-hvr" href="javascript:void(0);"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a class="twitter-bg-hvr" href="javascript:void(0);"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a class="instagram-bg-hvr" href="javascript:void(0);"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a class="pinterest-bg-hvr" href="javascript:void(0);"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--Team Text-->
+                        <div class="team-text">
+                            <h5>Coach Jeremy</h5>
+                            <span class="alt-font">Trainer</span>
+                        </div>
+                        <!--Team Progress-->
+                        <ul class="team-progress text-left">
+                            <!--Progress Item-->
+                            <li class="progress-item">
+                                <h6>3 pointers<span class="float-right"><b class="count">75</b>%</span></h6>
+                                <div class="progress">
+                                    <span class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></span>
+                                </div>
+                            </li>
+                            <!--Progress Item-->
+                            <li class="progress-item">
+                                <h6>Defense<span class="float-right"><b class="count">90</b>%</span></h6>
+                                <div class="progress">
+                                    <span class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Team Start-->
+
+<!--Portfolio Start-->
+<section id="portfolio" class="cube-portfolio1">
+    <div class="container">
+        <!--About-->
+        <div class="row align-items-center">
+            <div class="col-md-6 wow fadeInLeft">
+                <div class="title">
+                    <h6 class="third-color mb-3">From the Basketball Court</h6>
+                    <h2>Training Gallery</h2>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 wow fadeInRight">
+                <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.
+               <br><br>
+                Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. </p>
+            </div>
+        </div>
+
+        <div class="row wow fadeInUp">
+            <div class="col-md-12">
+                
+
+        <!--Portfolio Items-->
+        <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
+
+            <div class="cbp-item web-design graphic">
+                <a href="images/IMG_0840.jpeg" class="cbp-caption cbp-lightbox">
+                    <div class="cbp-caption-defaultWrap">
+                        <img src="images/IMG_0840.jpeg" width="100px" height="100px" alt="port-1">
+                    </div>
+                    <div class="cbp-caption-activeWrap"></div>
+                    <div class="cbp-l-caption-alignCenter center-block">
+                        <div class="cbp-l-caption-body">
+                            <div class="plus"></div>
+                            <h5 class="text-white mb-1">Latest Work</h5>
+                            <p class="text-white">See Our Amazing Work</p>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+            <div class="cbp-item seo marketing">
+                <a href="images/IMG_1303.jpeg" class="cbp-caption cbp-lightbox">
+                    <div class="cbp-caption-defaultWrap">
+                        <img src="images/IMG_1303.jpeg" width="100px" height="100px" alt="port-2">
+                    </div>
+                    <div class="cbp-caption-activeWrap"></div>
+                    <div class="cbp-l-caption-alignCenter center-block">
+                        <div class="cbp-l-caption-body">
+                            <div class="plus"></div>
+                            <h5 class="text-white mb-1">Latest Work</h5>
+                            <p class="text-white">See Our Amazing Work</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item seo marketing">
+                <a href="images/IMG_1300.jpeg" class="cbp-caption cbp-lightbox">
+                    <div class="cbp-caption-defaultWrap">
+                        <img src="images/IMG_1300.jpeg" width="100px" height="100px" alt="port-4">
+                    </div>
+                    <div class="cbp-caption-activeWrap"></div>
+                    <div class="cbp-l-caption-alignCenter center-block">
+                        <div class="cbp-l-caption-body">
+                            <div class="plus"></div>
+                            <h5 class="text-white mb-1">Latest Work</h5>
+                            <p class="text-white">See Our Amazing Work</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item graphic seo marketing">
+                <a href="images/IMG_1310.jpeg" class="cbp-caption cbp-lightbox">
+                    <div class="cbp-caption-defaultWrap">
+                        <img src="images/IMG_1310.jpeg" width="100px" height="100px"  alt="port-3">
+                    </div>
+                    <div class="cbp-caption-activeWrap"></div>
+                    <div class="cbp-l-caption-alignCenter center-block">
+                        <div class="cbp-l-caption-body">
+                            <div class="plus"></div>
+                            <h5 class="text-white mb-1">Latest Work</h5>
+                            <p class="text-white">See Our Amazing Work</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item graphic seo marketing">
+                <a href="https://www.youtube.com/embed/YZDGl6vapAI" class="cbp-caption cbp-lightbox">
+                    <div class="cbp-caption-defaultWrap">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YZDGl6vapAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="cbp-caption-activeWrap"></div>
+                    <div class="cbp-l-caption-alignCenter center-block">
+                        <div class="cbp-l-caption-body">
+                            <div class="plus"></div>
+                            <h5 class="text-white mb-1">Latest Work</h5>
+                            <p class="text-white">See Our Amazing Work</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item graphic seo marketing">
+                <a href="https://www.youtube.com/embed/Tuo357zGOSc" class="cbp-caption cbp-lightbox">
+                    <div class="cbp-caption-defaultWrap">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Tuo357zGOSc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                </div>
+                    <div class="cbp-caption-activeWrap"></div>
+                    <div class="cbp-l-caption-alignCenter center-block">
+                        <div class="cbp-l-caption-body">
+                            <div class="plus"></div>
+                            <h5 class="text-white mb-1">Latest Work</h5>
+                            <p class="text-white">See Our Amazing Work</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="cbp-item graphic seo marketing">
+                <a href="https://www.youtube.com/embed/3w2_j7Djci4" class="cbp-caption cbp-lightbox">
+            <div class="cbp-caption-defaultWrap">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3w2_j7Djci4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            <div class="cbp-caption-activeWrap"></div>
+            </div>
+            <div class="cbp-l-caption-alignCenter center-block">
+                <div class="cbp-l-caption-body">
+                    <div class="plus"></div>
+                    <h5 class="text-white mb-1">Latest Work</h5>
+                    <p class="text-white">See Our Amazing Work</p>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="cbp-item graphic seo marketing">
+            <a href="https://www.youtube.com/embed/niXbRhdqECc" class="cbp-caption cbp-lightbox">
+        <div class="cbp-caption-defaultWrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/niXbRhdqECc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        </div>
+        <div class="cbp-l-caption-alignCenter center-block">
+            <div class="cbp-l-caption-body">
+                <div class="plus"></div>
+                <h5 class="text-white mb-1">Latest Work</h5>
+                <p class="text-white">See Our Amazing Work</p>
+            </div>
+        </div>
+    </a>
+    </div>
+
+
+        </div>
+            <!--To Enable Load More Button Remove The Class="d-none"-->
+        <div id="js-loadMore-mosaic-flat" class="cbp-l-loadMore-bgbutton d-none">
+            <a href="loadmore.html" class="cbp-l-loadMore-link no-transition btn-rounded" rel="nofollow">
+                <span class="cbp-l-loadMore-defaultText no-transition ">Load More</span>
+                <span class="cbp-l-loadMore-loadingText ">Loading...</span>
+                <span class="cbp-l-loadMore-noMoreLoading">Finish</span>
+            </a>
+        </div>
+
+        </div>
+        </div>
+
+    </div>
+</section>
+<!--Portfolio end-->
+
+<!--Pricing Start-->
+
+<!--Pricing End Start-->
+
+<!--Content Start-->
+<section id='price' class="content">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 wow fadeInLeft">
+                <div class="title">
+                    <h6 class="third-color mb-3">You can trust us</h6>
+                    <h2 class="mb-4">We Know<br>How to Play</h2>
+                    <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitu eleifend in maximus metus sollicitudin.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 wow fadeInRight">
+                <div class="content-image">
+                    <img src="images/IMG_0336.jpeg" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Content End-->
+
+<!--Testimonial Start-->
+<section class="p-0">
+    <div class="container-fluid">
+        <div class="row">
+            <!--testimonial-->
+            <div class="col-md-6 bg-light">
+                <div id="testimonial_slider" class="owl-carousel">
+                    <!--testimonial item-->
+                    <div class="testimonial-item item">
+                    <i class="fa fa-quote-right testimonial-icon gradient-text1"></i>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae egestas mi, vel dapibus diam. Mauris malesuada, nisl non rutrum commodo, sem magna laoreet tellus, eu euismod dolor enim et mi. In at tempor purus. Nunc aliquet lacus vel posuere volutpat. Fusce ultrices sollicitudin nisl nec elementum. </p>
+
+                    <!--Image-->
+                    <div class="testimonial-image">
+                        <img src="images/testimonial-img1.jpg" alt="image">
+                    </div>
+                    <h5 class="font-weight-500 third-color">Sara WIlliamson</h5>
+                    <span class="destination">Project Manager, The Company Inc.</span>
+                </div>
+                    <!--testimonial item-->
+                    <div class="testimonial-item item">
+                        <i class="fa fa-quote-right testimonial-icon gradient-text1"></i>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae egestas mi, vel dapibus diam. Mauris malesuada, nisl non rutrum commodo, sem magna laoreet tellus, eu euismod dolor enim et mi. In at tempor purus. Nunc aliquet lacus vel posuere volutpat. Fusce ultrices sollicitudin nisl nec elementum. </p>
+
+                        <!--Image-->
+                        <div class="testimonial-image">
+                            <img src="images/testimonial-img2.jpg" alt="image">
+                        </div>
+                        <h5 class="font-weight-500 third-color">Jhon Amstrong</h5>
+                        <span class="destination">Company CEO, The Abacus Inc.</span>
+                    </div>
+                    <!--testimonial item-->
+                    <div class="testimonial-item item">
+                        <i class="fa fa-quote-right testimonial-icon gradient-text1"></i>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae egestas mi, vel dapibus diam. Mauris malesuada, nisl non rutrum commodo, sem magna laoreet tellus, eu euismod dolor enim et mi. In at tempor purus. Nunc aliquet lacus vel posuere volutpat. Fusce ultrices sollicitudin nisl nec elementum. </p>
+
+                        <!--Image-->
+                        <div class="testimonial-image">
+                            <img src="images/testimonial-img3.jpg" alt="image">
+                        </div>
+                        <h5 class="font-weight-500 third-color">Stephine Jhon</h5>
+                        <span class="destination">General Manager, The Company Inc.</span>
+                    </div>
+                </div>
+            </div>
+            <!--counters-->
+            <div class="col-md-6 p-0">
+                <!--counter background-->
+                <div class="counters d-flex align-items-center text-left bg-img1">
+                    <!--overlay-->
+                    <div class="bg-overlay gradient-bg1 opacity-8"></div>
+                   <div class="counter-row">
+                       <!--counters item-->
+                       <div class="counter-item">
+                           <div class="count alt-font">69</div>
+                           <h6 class="text-white">Games Played</h6>
+                       </div>
+                       <!--counters item-->
+                       <div class="counter-item">
+                           <div class="count alt-font">780</div>
+                           <h6 class="text-white">Games Coached</h6>
+                       </div>
+                       <!--counters item-->
+                       <div class="counter-item">
+                           <div class="count alt-font">456</div>
+                           <h6 class="text-white">Orders Served</h6>
+                       </div>
+                       <!--counters item-->
+                       <div class="counter-item">
+                           <div class="count alt-font">599</div>
+                           <h6 class="text-white">Happy Customers</h6>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Testimonial End-->
+
+<!--App Section-->
+<section id="app">
+    <div class="container">
+        <!--Heading-->
+        <div class="row">
+            <div class="col-md-12 text-center wow fadeIn">
+                <div class="title d-inline-block">
+                    <h6 class="mb-3">Mental Minded Academy</h6>
+                    <h2 class="gradient-text1 mb-3">Training Schedule</h2>
+                    <p>Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. </p>
+                </div>
+            </div>
+        </div>
+
+        <!--App deatil-->
+        <div class="row align-items-center text-center">
+
+            <div class="col-md-4 wow fadeInLeft">
+                <!--App deatil item-->
+                <div class="app-feature">
+                    <i class="fa fa-diamond gradient-text1" aria-hidden="true"></i>
+                    <h4 class="mb-3">Warm-ups/Stretch</h4>
+                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit Suspendisse in orci enim gravida nibh.</p>
+                </div>
+                <!--App deatil item-->
+                <div class="app-feature">
+                    <i class="fa fa-edit gradient-text1" aria-hidden="true"></i>
+                    <h4 class="mb-3">Conditioning</h4>
+                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit Suspendisse in orci enim gravida nibh.</p>
+                </div>
+            </div>
+
+            <!--app slider-->
+            <div class="col-md-4 wow fadeInUp">
+                <!--app Image-->
+                <div class="app-image">
+                    <img src="images/iphone-img.png" alt="image">
+                    <div id="app-slider" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="images/IMG_0336.jpeg" height="430" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="images/IMG_1562.PNG" height="410" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 wow fadeInRight">
+                <!--App deatil item-->
+                <div class="app-feature">
+                    <i class="fa fa-code gradient-text1" aria-hidden="true"></i>
+                    <h4 class="mb-3">Agility/Strength</h4>
+                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit Suspendisse in orci enim gravida nibh.</p>
+                </div>
+                <!--App deatil item-->
+                <div class="app-feature">
+                    <i class="fa fa-folder-open-o gradient-text1" aria-hidden="true"></i>
+                    <h4 class="mb-3">Offense/Defense</h4>
+                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit Suspendisse in orci enim gravida nibh.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--App Section End-->
+<!--Blog Start-->
+
+<!--Blog End-->
+
+<!--Address Start-->
+<section id="contact" class="p-0">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-6 p-0">
+                <div class="address-box title mb-0 bg-img4">
+                    <!--overlay-->
+                    <div class="bg-overlay gradient-bg1 opacity-8"></div>
+                    <div class="address-text text-center text-white position-relative wow fadeInUp">
+                        <h6 class="mb-3">Let the Ball float with your dreams!</h6>
+                        <!--title-->
+                        <h2 class="mb-4">Mental Minded Basketball Court</h2>
+                        <!--Address-->
+                        <p class="mb-3 text-white">Atlanta, GA United States Of America. </p>
+                        <!--Phone-->
+                        <p class="mb-3 text-white">Office Telephone : 404-957-9814<br>
+                            </p>
+                        <!--Email-->
+                        <p class="mb-3 text-white">email : mentalmindedbball@gmail.com<br>
+                            Inquiries : coachjeremy4@gmail.com</p>
+                        <!--Timing-->
+                        <p class="mb-3 text-white">Call for scheduling</p>
+                        <!--Social Icon-->
+                        <div class="address-social">
+                            <ul class="list-unstyled">
+                                <li><a class="facebook-text-hvr" href="javascript:void(0);"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a class="twitter-text-hvr" href="javascript:void(0);"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a class="google-text-hvr" href="javascript:void(0);"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a class="linkedin-text-hvr" href="javascript:void(0);"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a class="instagram-text-hvr" href="javascript:void(0);"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-0">
+                <div id="map" class="half-map bg-img-map">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Address End-->
+
+<!--Contact Start-->
+<section>
+    <div class="container">
+        <!--Heading-->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="title d-inline-block">
+                    <h6 class="mb-3 third-color">Mental Minded Basketball Training</h6>
+                    <h2>Let's Get In Touch</h2>
+                    </div>
+            </div>
+        </div>
+
+        <!--contact us-->
+        <form class="contact-form">
+            <div class="row">
+
+                <div class="col-sm-12" id="result"></div>
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="First Name:" required="" id="first_name" name="first_name">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Last Name:" required="" id="last_name" name="last_name">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <input class="form-control" type="email" placeholder="Email:" required="" id="email" name="email">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                        <input class="form-control" type="tel" placeholder="Phone:" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Message" id="message" name="message"></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-large btn-gradient btn-rounded mt-4" id="submit_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i> <span>Contact Now</span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!--Contact End-->
+
+<!--Footer Start-->
+<section class="bg-light text-center">
+    <h2 class="d-none">hidden</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer-social">
+                    <ul class="list-unstyled">
+                        <li><a class="wow fadeInUp" href="javascript:void(0);"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a class="wow fadeInDown" href="javascript:void(0);"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a class="wow fadeInUp" href="javascript:void(0);"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a class="wow fadeInDown" href="javascript:void(0);"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a class="wow fadeInUp" href="javascript:void(0);"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a class="wow fadeInDown" href="javascript:void(0);"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <p class="company-about fadeIn">© 2019 Code Splash, LLC. Made With Love By <a href="javascript:void(0);">Dario Sumlin</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Footer End-->
+
+<!--Scroll Top-->
+<a class="scroll-top-arrow" href="javascript:void(0);"><i class="fa fa-angle-up"></i></a>
+<!--Scroll Top End-->
+
+
+
+<!-- Optional JavaScript -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.appear.js"></script>
+<!-- isotop gallery -->
+<script src="js/isotope.pkgd.min.js"></script>
+<!-- cube portfolio gallery -->
+<script src="js/jquery.cubeportfolio.min.js"></script>
+<!-- owl carousel slider -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- text rotate -->
+<script src="js/morphext.min.js"></script>
+<!-- particles -->
+<script src="js/particles.min.js"></script>
+<!-- parallax Background -->
+<script src="js/parallaxie.min.js"></script>
+<!-- fancybox popup -->
+<script src="js/jquery.fancybox.min.js"></script>
+<!-- fancybox popup -->
+<script src="js/wow.js"></script>
+<!-- REVOLUTION JS FILES -->
+<script src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<!-- SLIDER REVOLUTION EXTENSIONS -->
+<script src="rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="rs-plugin/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+<!-- map -->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyB6YJu2gWq_4ABpOPGLy0c4JKg82U7a_JM"></script>
+<script src="js/map.js"></script>
+<!-- custom script -->
+<script src="js/script.js"></script>
 
 </body>
 </html>
